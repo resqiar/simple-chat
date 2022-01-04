@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style/global.css" />
+    <link rel="stylesheet" href="/style/index.css" />
+    <link rel="stylesheet" href="/style/mobile.css" />
+    <title>Chat Room</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="left-layout-wrapper">
+        <div class="chat-box-wrapper">
+          <div class="chat-box-header-wrapper">
+            <div class="chat-box-header-left">
+              <p>Signing as: <strong id="username">Anonymous</strong></p>
+            </div>
+            <div class="chat-box-header-right">
+              <p>People Online: <strong id="people-online-number">0</strong></p>
+            </div>
+          </div>
+          <div class="chat-box-body-wrapper"></div>
+          <div class="chat-box-input-wrapper">
+            <div class="input-wrapper">
+              <input
+                type="text"
+                name="chatinput"
+                id="input"
+                placeholder="Type a message"
+              />
+            </div>
+
+            <div class="send-button-wrapper">
+              <button id="send-btn">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right-layout-wrapper">
+        <div class="username-wrapper">
+          <div class="username-text-wrapper">
+            <p class="username-title">Change Username</p>
+            <p class="username-sub-title">
+              Change the username and it will updated automatically.
+            </p>
+          </div>
+          <div class="username-input-wrapper">
+            <input
+              type="text"
+              placeholder="Input username and hit enter"
+              name="username"
+              id="username-input"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Import individual script -->
+    <!-- The drawback of doing this (without Webpack) -->
+    <!-- is that the script MUST BE placed correctly -->
+    <!-- because if not, it will error. -->
+
+    <!-- IMPORT SOCKET IO PACKAGE -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- SOCKET CONFIG -->
+    <script src="/js/socket.js"></script>
+    <!-- USERNAME -->
+    <script src="/js/getUsername.js"></script>
+    <!-- MAIN SCRIPT -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>

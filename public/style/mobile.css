@@ -1,0 +1,23 @@
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .left-layout-wrapper {
+    padding: 18px 0px;
+    flex: 1;
+  }
+
+  .right-layout-wrapper {
+    padding: 18px 0px;
+    flex: 1;
+  }
+
+  .username-wrapper {
+    padding: 18px;
+  }
+
+  #username-input {
+    width: fit-content;
+  }
+}
